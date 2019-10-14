@@ -8,23 +8,22 @@
     <script>
         function busca(){
             var valor = prompt("Introduce un valor");
-            var numeros = new Array(700000);
-            for (var i = 0; i < 700000; i++){
-                numeros[i]=parseInt(Math.random() * 700000);
+            var numeros = new Array(1000000);
+            for (var i = 0; i < 1000000; i++){
+                numeros[i]=parseInt(Math.random() * 1000000);
             }
             
             
             var start = new Date();
             var j;
-            for (j = 0; j < 700000; j++){
-                if (j % 2 == 0){
+            for (j = 0; j < 1000000; j++){
                 if (numeros[j]==valor){
 		            var end = new Date();
                     alert("Está. Encontrado en " + ((end-start)/1000) + " segundos" );
                     break;
                 }
-            }}
-            if (j >= 699999){
+            }
+            if (j >= 9999999){
 		        var end = new Date();
                 alert("No está. Terminado en " + ((end-start)/1000) + " segundos" );
 		
